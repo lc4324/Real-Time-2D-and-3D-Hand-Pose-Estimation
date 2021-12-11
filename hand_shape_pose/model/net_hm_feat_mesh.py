@@ -202,7 +202,10 @@ class Net_HM_Feat(nn.Module):
             x = self.maxpool(x)
 
         # x: B x num_feat_chan x 4 x 4
-        out = x.view(x.size(0), -1)
+        # original
+        #out = x.view(x.size(0), -1)
+        # fix
+        out = x.contiguous().view(x.size(0), -1)
         # x: B x 4096
 
         return out

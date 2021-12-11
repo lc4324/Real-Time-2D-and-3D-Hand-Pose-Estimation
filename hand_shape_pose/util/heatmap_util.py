@@ -36,7 +36,10 @@ def compute_uv_from_heatmaps(hm, resize_dim):
   :return: uv in resize_dim (Variable)
   """
   upsample = nn.Upsample(size=resize_dim, mode='bilinear')  # (B x K) x H x W
-  resized_hm = upsample(hm).view(-1, resize_dim[0], resize_dim[1])
+  # original 
+  # resized_hm = upsample(hm).view(-1, resize_dim[0], resize_dim[1])
+  # fix
+  resized_hm = upsample(hm).contiguous().view(-1, resize_dim[0], resize_dim[1])
 
   uv_confidence = find_keypoints_max(resized_hm)  # (B x K) x 3
 
