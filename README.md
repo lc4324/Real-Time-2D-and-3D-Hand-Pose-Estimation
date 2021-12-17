@@ -9,3 +9,6 @@ details.
 
 ### Running the code
 For installation, training and evaluation of our models, see ./hand_pose_estimation_train_evaluate.ipynb for details
+
+### Dataset
+The FreiHAND dataset used in this project can be found here: https://lmb.informatik.uni-freiburg.de/resources/datasets/FreihandDataset.en.html
