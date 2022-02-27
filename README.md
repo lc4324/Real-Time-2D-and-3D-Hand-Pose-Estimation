@@ -12,3 +12,5 @@ For installation, training and evaluation of our models, see ./hand_pose_estimat
 
 ### Dataset
 The FreiHAND dataset used in this project can be found here: https://lmb.informatik.uni-freiburg.de/resources/datasets/FreihandDataset.en.html
+
+
